@@ -1,14 +1,49 @@
-# Compiler files
+# Environment variables
+.env
+.env.*
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Build outputs
+dist/
+build/
+coverage/
+out/
+.next/
+
+# Contracts / Foundry
 contracts/cache/
 contracts/out/
-
-# Ignores development broadcast logs
-!/contracts/broadcast
-/contracts/broadcast/*/31337/
-/contracts/broadcast/**/dry-run/
-
-# Docs
 contracts/docs/
 
-# Dotenv file
-**/.env/
+# Ignore development broadcast logs
+contracts/broadcast/*/31337/
+contracts/broadcast/**/dry-run/
+
+# Keep base broadcast folder
+!contracts/broadcast
+
+# Vercel
+.vercel
+
+# TypeScript / Next.js
+*.tsbuildinfo
+next-env.d.ts
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# OS / misc
+.DS_Store
+*.pem
